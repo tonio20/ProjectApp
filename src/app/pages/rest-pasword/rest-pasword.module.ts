@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TrajesPageRoutingModule } from './trajes-routing.module';
+import { RestPaswordPageRoutingModule } from './rest-pasword-routing.module';
 
-import { TrajesPage } from './trajes.page';
+import { RestPaswordPage } from './rest-pasword.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TrajesPageRoutingModule
+    RestPaswordPageRoutingModule
   ],
-  declarations: [TrajesPage]
+  declarations: [RestPaswordPage]
 })
-export class TrajesPageModule {}
+export class RestPaswordPageModule {}
