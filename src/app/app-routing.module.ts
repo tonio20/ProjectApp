@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'alumnos',
+    redirectTo: 'cargando',
     pathMatch: 'full'
   },
   {
@@ -31,6 +31,10 @@ const routes: Routes = [
   {
     path: 'rest-pasword',
     loadChildren: () => import('./pages/rest-pasword/rest-pasword.module').then( m => m.RestPaswordPageModule)
+  },
+  {
+    path: 'secciones',
+    loadChildren: () => import('./pages/secciones/secciones.module').then( m => m.SeccionesPageModule)
   }
 ];
 

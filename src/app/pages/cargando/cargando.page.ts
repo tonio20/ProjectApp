@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CargandoPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.router.navigate(['login']);
   }
 
 }
