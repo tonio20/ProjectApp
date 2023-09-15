@@ -1,27 +1,32 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Registro Profesor</ion-title>
+    <ion-title class="centrado">Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-card>
-    <img alt="Silhouette of mountains" src="" />
+    <img src="https://seeklogo.com/images/D/duoc-uc-logo-F1437952BE-seeklogo.com.png" />
     <ion-card-header>
-      <ion-card-title></ion-card-title>
-      <ion-card-subtitle class="centrado">Bienvenido Profesor </ion-card-subtitle>
+      <ion-card-title class="centrado">BIENVENIDO</ion-card-title>
+      
     </ion-card-header>
   
     <ion-card-content>
       <ion-item>
-        <ion-input label="Usuario:"  ngModel email errorText="Usuario Invalido" placeholder="Ej:Usuario"></ion-input>
+        <ion-input label="Usuario:"  type="email" [(ngModel)]="email" name="email" required></ion-input>
+        <div style="color: red;" class="error-message">{{ emailError }}</div>
       </ion-item>
-      <ion-item>
-        <ion-input label="Contraseña:" errorText="Contraseña Invalida" placeholder="Ingrese Clave" type="password" value=""></ion-input>
+      <ion-item> 
+        <ion-input label="clave:"  type="password" [(ngModel)]="password" name="password" required></ion-input>
+        <div style="color: red;" class="error-message">{{ passwordError }}</div>
       </ion-item>
 
-      <ion-button color="dark"  fill="outline" expand="block">INGRESAR</ion-button>
-      <ion-button color="medium" size="small" fill="clear" expand="block">Restablecer Contraseña ?</ion-button>
+      <ion-button color="dark"  (click)="login()" fill="outline" expand="block">INGRESAR</ion-button>
+      <br>
+      <ion-button color="dark"  (click)="registro()" fill="outline" expand="block">Registrar</ion-button>
+      <ion-button color="medium" (click)="restpasword()" size="small" fill="clear" expand="block">Restablecer Contraseña</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>
+ 

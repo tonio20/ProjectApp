@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>ingsoftware</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>Asistencias</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-list>
+          <ion-item>
+            <ion-label>Fecha</ion-label>
+            <ion-label slot="end">Asistencia</ion-label>
+            <br>
+          </ion-item>
+          <ion-list>
+            <ion-item>
+              <ion-badge slot="end">Presente</ion-badge>
+              <ion-label>Martes 08 de noviembre, 2023 </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-list>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>
